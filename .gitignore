@@ -1,4 +1,5 @@
 .DS_STORE
+.htaccess
 .bundle
 db/*.sqlite3
 log/*.log
