@@ -23,8 +23,7 @@ gem 'capistrano'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
-require 'rubygems'
-require 'koala'
+gem 'koala', '1.0.0.rc'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
