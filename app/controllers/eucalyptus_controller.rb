@@ -3,6 +3,11 @@ class EucalyptusController < ApplicationController
   
   def index
     @cookies = cookies
+    
+    if @facebook_cookies['access_token'] != nil
+      @access_token ||= @facebook_cookies['access_token']
+    end
+    
     respond_to do |format|
       format.html
     end

@@ -7,8 +7,7 @@ test:
   app_id: 107359512659121
   secret_key: 08c72213c3361283cd28060bcff38e5b
   callback_url: http://localhost:3000/
-
 production:
   app_id: 107359512659121
   secret_key: 08c72213c3361283cd28060bcff38e5b
-  callback_url: http://localhost:3000/
+  callback_url: http://eucalyptus.heroku.com/
