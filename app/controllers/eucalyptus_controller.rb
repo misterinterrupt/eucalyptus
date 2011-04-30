@@ -4,7 +4,7 @@ class EucalyptusController < ApplicationController
   def index
     @cookies = cookies
     
-    if @facebook_cookies['access_token'] != nil
+    if @facebook_cookies != nil
       @access_token ||= @facebook_cookies['access_token']
     end
     
