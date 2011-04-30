@@ -1,7 +1,6 @@
-class PartyfreakoutonlineController < ApplicationController
+class EucalyptusController < ApplicationController
   before_filter :parse_facebook_cookies
   
-  # GET /partyfreakoutonline
   def index
     @cookies = cookies
     respond_to do |format|
