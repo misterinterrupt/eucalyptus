@@ -18,8 +18,8 @@ gem 'capistrano'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3
-gem 'sqlite3-ruby', '1.2.1', :require => 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
+# gem 'sqlite3-ruby', '1.2.1', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 

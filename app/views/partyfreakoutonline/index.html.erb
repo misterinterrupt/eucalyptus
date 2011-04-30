@@ -1,1 +1,6 @@
-<h3>Freak out!</h3>
+<h3>Facebook Freak out!</h3>
+<div id="fb-root"></div>
+<p style="color: green"><%= flash[:notice] %></p>
+<p><%= @facebook_cookies.inspect %></p>
+<p><%= @signed_request.inspect %></p>
+<p><%= @cookies.inspect %></p>
