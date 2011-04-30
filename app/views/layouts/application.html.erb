@@ -12,17 +12,28 @@
   <script>
     window.fbAsyncInit = function() {
       FB.init({ appId: '<%= Facebook::APP_ID %>', status: true, cookie: true, xfbml: true });
-      FB.login(
-        function(response) {
-          if (response.session) {
-            window.location.reload()
-          } else {
-            var msg = document.createElement('a');
-            msg.href = 'javascript:window.location.reload()';
-            msg.innerHTML = 'maybe next time..'
-            document.getElementById('message').appendChild(msg)
-          }
-        });
+      
+      FB.getLoginStatus(function(response) {
+        if (response.session) {
+          // logged in and connected user, someone you know
+          msg = 'I remember you'
+          document.getElementById('message').innerHTML = msg
+        } else {
+          // no user session available, someone you dont know      
+          FB.login(
+            function(response) {
+              if (response.session) {
+                window.location.reload()
+              } else {
+                var msg = document.createElement('a');
+                msg.href = 'javascript:window.location.reload()';
+                msg.innerHTML = 'maybe next time..'
+                document.getElementById('message').appendChild(msg)
+              }
+          });
+        }
+      });
+      
     };
     (function() {
       var e = document.createElement('script'); e.async = true;
